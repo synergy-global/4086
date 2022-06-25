@@ -6,15 +6,10 @@
     <FILE id="U00DFt" name="magic.xml" compile="0" resource="1" file="Source/magic.xml"/>
     <GROUP id="{AA7AA636-E434-1CAA-67BD-4953F42449DC}" name="New Group"/>
     <GROUP id="{2BC6B40D-1B3D-BDE6-9F9A-E4C0679E68CA}" name="Source">
-      <FILE id="MwwyKB" name="PluginProcessor.cpp" compile="1" resource="0"
-            file="Source/PluginProcessor.cpp"/>
-      <FILE id="shVC1W" name="roland_SH_101_knob.png" compile="0" resource="1"
-            file="../../Downloads/roland_SH_101_knob.png"/>
-      <FILE id="V7A9kO" name="fx-2.png" compile="0" resource="1" file="../../Downloads/fx-2.png"/>
       <FILE id="yDsaz7" name="PluginProcessor.h" compile="0" resource="0"
             file="Source/PluginProcessor.h"/>
-      <FILE id="GixZQV" name="comp.h" compile="0" resource="0" file="Source/comp.h"/>
-      <FILE id="Efahep" name="comp.cpp" compile="1" resource="0" file="Source/comp.cpp"/>
+      <FILE id="MwwyKB" name="PluginProcessor.cpp" compile="1" resource="0"
+            file="Source/PluginProcessor.cpp"/>
       <FILE id="IaAmHH" name="PluginEditor.cpp" compile="1" resource="0"
             file="Source/PluginEditor.cpp"/>
       <FILE id="WxASRT" name="PluginEditor.h" compile="0" resource="0" file="Source/PluginEditor.h"/>
@@ -43,8 +38,8 @@
         <MODULEPATH id="juce_gui_basics" path="../../../Applications/JUCE/modules"/>
         <MODULEPATH id="juce_gui_extra" path="../../../Applications/JUCE/modules"/>
         <MODULEPATH id="juce_cryptography" path="../../../Applications/JUCE/modules"/>
-        <MODULEPATH id="foleys_gui_magic" path="../GitHub/PluginGuiMagic/modules"/>
         <MODULEPATH id="juce_osc" path="../GitHub/tracktion_engine/modules/juce/modules"/>
+        <MODULEPATH id="foleys_gui_magic" path="../../PluginGuiMagic/modules"/>
       </MODULEPATHS>
     </XCODE_MAC>
   </EXPORTFORMATS>

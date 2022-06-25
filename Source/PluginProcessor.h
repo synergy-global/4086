@@ -52,10 +52,42 @@ public:
     //==============================================================================
     void getStateInformation (juce::MemoryBlock& destData) override;
     void setStateInformation (const void* data, int sizeInBytes) override;
-     
+    
+    
+    
+    
+    
+    
+    
+struct Eqsettings
+    {
+    float LFGainInDecibels{ 0 }, LMFGainInDecibels{ 0 }, HMFGainInDecibels{ 0 }, HFGainInDecibels{ 0 };
+    
+};
+
+    Eqsettings geteqSettings(juce::AudioProcessorValueTreeState& parameters);
 private:
     juce::AudioProcessorValueTreeState parameters; 
     AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
+    
+    
+    
+    
+    using Filter = juce::dsp::IIR::Filter<float>;
+
+
+    using MonoChain = juce::dsp::ProcessorChain<Filter, Filter, Filter, Filter>;
+
+    MonoChain leftChain, rightChain;
+
+    enum ChainPositions
+    {
+        LF,
+        LMF,
+        HMF,
+        HF
+    };
+
     //==============================================================================
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (_4086AudioProcessor)
 };

@@ -64,6 +64,20 @@ AudioProcessorValueTreeState::ParameterLayout _4086AudioProcessor::createParamet
     
     return { params.begin(), params.end() };
 }
+
+_4086AudioProcessor::Eqsettings geteqSettings(juce::AudioProcessorValueTreeState& parameters)
+{
+
+    _4086AudioProcessor::Eqsettings settings;
+
+    settings.LFGainInDecibels = parameters.getRawParameterValue("LowCut Freq")->load();
+    settings.LMFGainInDecibels = parameters.getRawParameterValue("HighCut Freq")->load();
+    settings.HMFGainInDecibels = parameters.getRawParameterValue("Peak Freq")->load();
+    settings.HFGainInDecibels = parameters.getRawParameterValue("Peak Gain")->load();
+
+   return settings;
+}
+
 _4086AudioProcessor::~_4086AudioProcessor()
 {
 }
